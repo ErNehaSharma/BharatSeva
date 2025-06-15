@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Govt App Flashcards</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 28px;
+      color: #1e293b;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .flip-card {
+      perspective: 1000px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      transition: transform 0.6s ease;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .flip-card-front {
+      background: white;
+      color: #1e293b;
+    }
+
+    .flip-card-back {
+      background: #1d4ed8;
+      color: white;
+      transform: rotateY(180deg);
+    }
+
+    .emoji {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .flip-card-back {
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<h1>📱 Govt App Flashcards</h1>
+
+
+<div class="grid">
+  <div class="flip-card"><div class="flip-card-inner">
+    <div class="flip-card-front"><div class="emoji">📲</div><div class="name">UMANG</div></div>
+    <div class="flip-card-back">Access 100+ central and state government services.</div>
+  </div></div>
+
+  <div class="flip-card"><div class="flip-card-inner">
+    <div class="flip-card-front"><div class="emoji">📄</div><div class="name">DigiLocker</div></div>
+    <div class="flip-card-back">Store and access important documents online securely.</div>
+  </div></div>
+
+  <div class="flip-card"><div class="flip-card-inner">
+    <div class="flip-card-front"><div class="emoji">🧑‍⚕️</div><div class="name">Aarogya Setu</div></div>
+    <div class="flip-card-back">COVID-19 contact tracing and health updates.</div>
+  </div></div>
+
+  <div class="flip-card"><div class="flip-card-inner">
+    <div class="flip-card-front"><div class="emoji">💳</div><div class="name">BHIM</div></div>
+    <div class="flip-card-back">Make UPI payments securely and instantly.</div>
+  </div></div>
+
+  <div class="flip-card"><div class="flip-card-inner">
+    <div class="flip-card-front"><div class="emoji">🧾</div><div class="name">GST Rate Finder</div></div>
+    <div class="flip-card-back">Find GST rates of items easily with this official app.</div>
+  </div></div>
+
+  <div class="flip-card"><div class="flip-card-inner">
+    <div class="flip-card-front"><div class="emoji">🧑‍🏫</div><div class="name">SWAYAM</div></div>
+    <div class="flip-card-back">Free online courses by MHRD and top institutions.</div>
+  </div></div>
+
+  <div class="flip-card"><div class="flip-card-inner">
+    <div class="flip-card-front"><div class="emoji">🧑‍🌾</div><div class="name">PM-KISAN</div></div>
+    <div class="flip-card-back">Check status and details of farmer support schemes.</div>
+  </div></div>
+
+  <div class="flip-card"><div class="flip-card-inner">
+    <div class="flip-card-front"><div class="emoji">💊</div><div class="name">eSanjeevani</div></div>
+    <div class="flip-card-back">Telemedicine platform for doctor consultations.</div>
+  </div></div>
+
+  <div class="flip-card"><div class="flip-card-inner">
+    <div class="flip-card-front"><div class="emoji">📦</div><div class="name">Post Info</div></div>
+    <div class="flip-card-back">Track parcels and services by India Post.</div>
+  </div></div>
+
+  <div class="flip-card"><div class="flip-card-inner">
+    <div class="flip-card-front"><div class="emoji">🎓</div><div class="name">NIRF</div></div>
+    <div class="flip-card-back">Rankings of colleges and universities in India.</div>
+  </div></div>
+
+  <div class="flip-card"><div class="flip-card-inner">
+    <div class="flip-card-front"><div class="emoji">💡</div><div class="name">Vidyut Pravah</div></div>
+    <div class="flip-card-back">Real-time info about electricity supply and rates.</div>
+  </div></div>
+
+  <div class="flip-card"><div class="flip-card-inner">
+    <div class="flip-card-front"><div class="emoji">📶</div><div class="name">MyGov</div></div>
+    <div class="flip-card-back">Engage with the government in policy making and feedback.</div>
+  </div></div>
+
+  <div class="flip-card"><div class="flip-card-inner">
+    <div class="flip-card-front"><div class="emoji">🧠</div><div class="name">NPTEL</div></div>
+    <div class="flip-card-back">Technical courses by IITs and IISc under MHRD.</div>
+  </div></div>
+
+  <div class="flip-card"><div class="flip-card-inner">
+    <div class="flip-card-front"><div class="emoji">💼</div><div class="name">National Career Service</div></div>
+    <div class="flip-card-back">Job portal for youth by Ministry of Labour & Employment.</div>
+  </div></div>
+
+  <div class="flip-card"><div class="flip-card-inner">
+    <div class="flip-card-front"><div class="emoji">🚉</div><div class="name">IRCTC Rail Connect</div></div>
+    <div class="flip-card-back">Book train tickets and check PNR easily.</div>
+  </div></div>
+
+  <div class="flip-card"><div class="flip-card-inner">
+    <div class="flip-card-front"><div class="emoji">🏥</div><div class="name">CGHS</div></div>
+    <div class="flip-card-back">Healthcare services for government employees.</div>
+  </div></div>
+
+  <div class="flip-card"><div class="flip-card-inner">
+    <div class="flip-card-front"><div class="emoji">🚗</div><div class="name">mParivahan</div></div>
+    <div class="flip-card-back">Access DL, RC, traffic fines & vehicle details.</div>
+  </div></div>
+
+  <div class="flip-card"><div class="flip-card-inner">
+    <div class="flip-card-front"><div class="emoji">🗳️</div><div class="name">Voter Helpline</div></div>
+    <div class="flip-card-back">Check voter ID, polling station, and complaint status.</div>
+  </div></div>
+
+  <div class="flip-card"><div class="flip-card-inner">
+    <div class="flip-card-front"><div class="emoji">💰</div><div class="name">PF Balance Check</div></div>
+    <div class="flip-card-back">Check EPFO balance and UAN details.</div>
+  </div></div>
+
+  <div class="flip-card"><div class="flip-card-inner">
+    <div class="flip-card-front"><div class="emoji">📚</div><div class="name">DIKSHA</div></div>
+    <div class="flip-card-back">School learning resources and digital textbooks.</div>
+  </div></div>
+</div>
+
+</body>
+</html>

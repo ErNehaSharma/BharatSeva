@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Govt Job Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎯 Bharat-Seva-Hub</h1>
+    <nav>
+      <a href="index.html">“Empowering Citizens with Every Click – Explore India’s Government Services.”</a>
+    </nav>
+  </header>
+
+  <section class="hero chakra-section">
+    <div class="chakra-content">
+      <div class="text-left">
+        <h2>Find Latest Government Jobs</h2>
+        <p>Central | State | Defence | ISRO | DRDO & more <br> Sarkari Job Finder is your one-stop 
+            platform where we list all official government job portals in one place — making it easy 
+            and accessible for everyone to explore Central, State, Defence, ISRO, DRDO, Railways, and 
+            Banking job opportunities. We’ve also added a Fun-Fact section where you can know a little 
+            more about our great nation! 🤓😊</p>
+      </div>
+      <div class="chakra-wrapper">
+        <img src="indiag.gif" alt="Animated background map of India" />
+        <img src="indiab.png" alt="Ashoka Chakra" class="rotating-chakra" />
+      </div>
+      
+    </div>
+  </section>
+
+  <section class="categories">
+    <h3>Categories</h3>
+    <div class="card-grid">
+      <div class="card"><a href="Central Govt.html">Central Govt</a></div>
+      <div class="card"><a href="Defence.html">Defence</a></div>
+      <div class="card"><a href="ISRO.html">ISRO</a></div>
+      <div class="card"><a href="DRDO.html">DRDO</a></div>
+      <div class="card"><a href="Railway.html">Railways</a></div>
+      <div class="card"><a href="Banking.html">Banking</a></div>
+      <div class="card"><a href="stategovFunfact.html">State Government</a></div>
+      <div class="card"><a href="Fun-fact.html">Government Apps</a></div>
+      <div class="card"><a href="sscchar.html">Easy to know</a></div>
+    </div>
+  </section>
+
+  <div id="welcome-popup" class="popup">
+    <div class="popup-content">
+      <h2>👋 Welcome!</h2>
+      <p>Explore the latest government jobs across India.</p>
+      <button id="popup-close-btn">Get Started</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const popup = document.getElementById("welcome-popup");
+      const closeBtn = document.getElementById("popup-close-btn");
+
+      // Show the popup on page load
+      popup.style.display = "flex";
+
+      // Close the popup when the button is clicked
+      closeBtn.addEventListener('click', function() {
+        popup.style.display = "none";
+      });
+
+      // Function to change background color
+      function changeBackgroundColor() {
+        const colors = ['#E8F9FF', '#FAF1E6', '#FDFAF6', '#E4EFE7', '#F1E7E7'];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        document.body.style.backgroundColor = randomColor;
+      }
+
+      // Change background color every 3 seconds
+      setInterval(changeBackgroundColor, 3000);
+    });
+
+    let index = 0; // current position in text
+  let isDeleting = false;
+  const speed = 70; // typing speed in ms
+  const pauseDelay = 1500; // pause time at end/start
+  function type() {
+    if (!isDeleting) {
+      display.textContent = text.substring(0, index + 1);
+      index++;
+      if (index === text.length) {
+        isDeleting = true;
+        setTimeout(type, pauseDelay);
+      } else {
+        setTimeout(type, speed + Math.random() * 50);
+      }
+    } else {
+      display.textContent = text.substring(0, index - 1);
+      index--;
+      if (index === 0) {
+        isDeleting = false;
+        setTimeout(type, speed);
+      } else {
+        setTimeout(type, speed / 2);
+      }
+    }
+  }
+  document.addEventListener('DOMContentLoaded', type);
+
+
+
+  </script>
+
+  <footer>
+    <p>© 2025 Sarkari Job Finder | All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,273 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* General Body Styling */
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 1s ease; /* Smooth transition for color change */
+  }
+  
+  /* Header */
+  header {
+    background: #003366;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+  
+  nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #e6f0ff;
+    margin-top: 20px;
+  }
+  
+  .hero h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  /* Categories Section */
+  .categories {
+    padding: 30px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .categories h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s ease-in-out;
+  }
+  
+  .card a {
+    color: #003366;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card a:hover {
+    color: #ffcc00;
+  }
+  
+  /* Popup Styling */
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .popup-content h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  .popup-content p {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  
+  .popup-content button {
+    padding: 10px 20px;
+    background: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .popup-content button:hover {
+    background: #0055aa;
+  }
+  
+  .chakra-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .chakra-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+    padding: 40px 20px;
+  }
+  
+  #typewriter-text {
+    font-size: 16px;
+    color: #333;
+    white-space: pre-wrap;
+    min-height: 100px;
+    user-select: none;
+    border-right: 2px solid #333; /* Cursor effect */
+    padding-right: 5px;
+    display: inline-block;
+    animation: blink 1s step-end infinite; /* Cursor blink animation */
+  }
+  @keyframes blink {
+    0%, 50% { border-color: #333; }
+    51%, 100% { border-color: transparent; }
+  }
+
+  .text-left {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .chakra-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .chakra-animation {
+    width: 120px;
+    height: 120px;
+    border: 6px solid #1a75ff;
+    border-radius: 50%;
+    border-top: 6px solid transparent;
+    animation: spin 3s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .chakra-wrapper {
+    position: relative;
+    width: 250px;   /* match your PNG size */
+    height: 250px;
+    margin: 20px auto; /* optional centering */
+    perspective: 800px; /* for 3D rotation */
+  }
+  .chakra-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+    user-select: none;
+  }
+  .chakra-wrapper img.rotating-chakra {
+    z-index: 2; /* PNG on top */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    will-change: transform;
+    animation: floatInAir 5s ease-in-out infinite; /* keep your existing float animation */
+  }
+  .chakra-wrapper img:not(.rotating-chakra) {
+    z-index: 1; /* GIF behind */
+    opacity: 0.5; /* Fade the gif to 50% opacity */
+
+  }
+
+
+  
+
+  /* Footer */
+  footer {
+    background: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+  }
+  
+  .floating-chakra {
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+  }
+  
+  .rotating-chakra {
+    width: 230px;
+    height: 230px;
+    display: block;
+    margin: 20px auto;
+    animation: floatInAir 5s ease-in-out infinite;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
+  }
+  
+  @keyframes floatInAir {
+    0%   { transform: translateY(0) rotate(0deg); }
+    50%  { transform: translateY(-20px) rotate(3deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+  }
+  
+  
+
+  footer p {
+    font-size: 14px;
+  }
+  
